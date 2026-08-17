@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aiden &amp; Pranjal · The Blue Ridge · Aug 22–23, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#232f4b;
+  --ink-deep:#1a2338;
+  --ridge1:#2e3e63;
+  --ridge2:#48597f;
+  --ridge3:#6d80a4;
+  --ridge4:#9dafc9;
+  --ridge5:#c9d4e4;
+  --paper:#f4efe2;
+  --paper-dim:#eae3d1;
+  --amber:#df8a32;
+  --gold:#efb65b;
+  --rose:#d4694f;
+  --moss:#5c6e51;
+  --disp:'Big Shoulders Display',sans-serif;
+  --serif:'Fraunces',serif;
+  --body:'Figtree',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+::selection{background:var(--amber);color:var(--paper)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:2px}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;overflow:hidden;background:linear-gradient(180deg,#f4efe2 0%,#f3e4bd 34%,#eec179 58%,#e39a58 76%,#d4694f 100%)}
+.hero-sky{position:absolute;inset:0;pointer-events:none}
+.sun{position:absolute;left:50%;top:44%;width:min(34vw,300px);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,#fff3d6 0%,#f7cf7e 55%,#efb65b 100%);box-shadow:0 0 90px 40px rgba(239,182,91,.55);animation:sunbreathe 9s ease-in-out infinite}
+@keyframes sunbreathe{0%,100%{box-shadow:0 0 90px 40px rgba(239,182,91,.5)}50%{box-shadow:0 0 130px 60px rgba(239,182,91,.7)}}
+.hero-ridges{position:absolute;left:0;right:0;bottom:0;width:100%;height:58%;pointer-events:none}
+.hero-ridges svg{position:absolute;inset:0;width:100%;height:100%}
+.hero-inner{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;padding:clamp(2rem,5vh,4rem) 1.5rem 0;flex:1}
+.eyebrow{font-family:var(--disp);font-weight:600;letter-spacing:.42em;text-transform:uppercase;font-size:clamp(.72rem,1.6vw,.95rem);color:var(--ink);opacity:.85}
+.eyebrow .dot{color:var(--amber)}
+.hero h1{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(4rem,15vw,11.5rem);line-height:.88;letter-spacing:.015em;margin-top:1.2rem;color:var(--ink);text-shadow:0 2px 0 rgba(244,239,226,.35)}
+.hero .sub{font-family:var(--serif);font-style:italic;font-size:clamp(1.1rem,2.6vw,1.6rem);margin-top:1.4rem;color:var(--ink);max-width:34ch}
+.hero-ticket{position:relative;z-index:2;margin:auto auto 0;display:flex;gap:0;background:var(--paper);border:2px solid var(--ink);border-bottom:none;border-radius:14px 14px 0 0;overflow:hidden;transform:translateY(1px)}
+.hero-ticket div{padding:.8rem 1.4rem;display:flex;flex-direction:column;gap:.1rem;border-right:2px dashed var(--ink)}
+.hero-ticket div:last-child{border-right:none}
+.hero-ticket .k{font-family:var(--disp);font-weight:600;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;opacity:.6}
+.hero-ticket .v{font-family:var(--disp);font-weight:700;font-size:1.15rem;letter-spacing:.06em;text-transform:uppercase}
+
+/* ---------- SHARED ---------- */
+.wrap{max-width:1060px;margin:0 auto;padding:0 1.5rem}
+section{position:relative}
+.sec-head{display:flex;align-items:baseline;gap:1.2rem;flex-wrap:wrap;margin-bottom:.4rem}
+.sec-head h2{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(2.6rem,6vw,4.4rem);line-height:1;letter-spacing:.02em}
+.sec-head .tag{font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--rose)}
+.rule{height:4px;background:var(--ink);margin:1.2rem 0 0;position:relative}
+.rule::after{content:"";position:absolute;right:0;top:-4px;width:52px;height:12px;background:var(--amber)}
+
+/* ---------- STATS STRIP ---------- */
+.stats{background:var(--ink);color:var(--paper);border-top:2px solid var(--ink)}
+.stats .wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:0}
+.stat{padding:1.6rem .8rem;text-align:center;border-right:1px solid rgba(244,239,226,.18)}
+.stat:last-child{border-right:none}
+.stat .n{font-family:var(--disp);font-weight:800;font-size:clamp(1.7rem,3.4vw,2.6rem);letter-spacing:.03em;color:var(--gold)}
+.stat .l{font-family:var(--disp);font-weight:500;font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;opacity:.75;margin-top:.2rem}
+
+/* ---------- DAY TIMELINE ---------- */
+.day{padding:clamp(3.5rem,8vh,6rem) 0 clamp(2.5rem,6vh,4rem)}
+.timeline{margin-top:2.8rem;position:relative;padding-left:10px}
+.stop{position:relative;display:grid;grid-template-columns:120px 1fr;gap:1.6rem;padding:0 0 2.2rem 2.2rem}
+.stop::before{content:"";position:absolute;left:0;top:10px;bottom:-10px;width:2px;background-image:linear-gradient(var(--ridge3) 55%,transparent 55%);background-size:2px 12px}
+.stop:last-child::before{display:none}
+.stop::after{content:"";position:absolute;left:-7px;top:6px;width:14px;height:14px;background:var(--amber);border:2px solid var(--ink);transform:rotate(45deg)}
+.stop.big::after{background:var(--rose)}
+.stop .time{font-family:var(--disp);font-weight:700;font-size:1.3rem;letter-spacing:.06em;color:var(--rose);white-space:nowrap;padding-top:.05rem}
+.stop h3{font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:1.45rem;letter-spacing:.04em;line-height:1.1}
+.stop p{margin-top:.35rem;max-width:56ch;color:#3c4763}
+.stop .loc{display:inline-block;margin-top:.5rem;font-family:var(--disp);font-weight:600;font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--paper);background:var(--ink);padding:.32rem .7rem;border-radius:3px}
+.badge{display:inline-block;font-family:var(--serif);font-style:italic;color:var(--rose);font-size:1rem;margin-left:.4rem}
+
+/* ---------- PHOTO POSTCARDS ---------- */
+.photocard{position:relative;margin-top:1.2rem;max-width:470px;background:#fffdf6;border:2px solid var(--ink);border-radius:6px;padding:10px 10px 0;box-shadow:7px 9px 0 rgba(35,47,75,.16);transform:rotate(-1.4deg)}
+.photocard.tilt-r{transform:rotate(1.3deg)}
+.photocard::before{content:"";position:absolute;top:-11px;left:50%;transform:translateX(-50%) rotate(-2deg);width:92px;height:22px;background:rgba(239,182,91,.55);border:1px solid rgba(35,47,75,.18);z-index:2}
+.photocard .ph{position:relative;overflow:hidden;border-radius:3px;background:var(--ridge5)}
+.photocard img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.photocard .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(223,138,50,.10),rgba(35,47,75,.16));mix-blend-mode:multiply;pointer-events:none}
+.photocard figcaption{font-family:var(--serif);font-style:italic;font-size:.92rem;padding:.55rem .35rem .75rem;color:#4a5470;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.photocard .cred{font-family:var(--disp);font-style:normal;font-weight:600;font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;opacity:.5;white-space:nowrap}
+.photo-duo{display:flex;gap:1.4rem;flex-wrap:wrap;align-items:flex-start}
+.photo-duo .photocard{flex:1 1 220px;max-width:300px}
+.photo-duo .photocard img{aspect-ratio:4/3}
+@media (max-width:760px){.photocard{max-width:100%}.photo-duo .photocard{max-width:100%}}
+
+/* ---------- SUNSET INTERLUDE ---------- */
+.interlude{position:relative;min-height:520px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;background:linear-gradient(180deg,#3a2f52 0%,#7a4a68 30%,#d4694f 62%,#efb65b 88%,#f7cf7e 100%)}
+.interlude svg{position:absolute;inset:auto 0 0 0;width:100%;height:78%}
+.interlude .sun2{position:absolute;left:50%;bottom:34%;width:200px;aspect-ratio:1;transform:translateX(-50%);border-radius:50%;background:radial-gradient(circle,#fff3d6,#f2b45c);box-shadow:0 0 80px 30px rgba(242,180,92,.6)}
+.interlude-text{position:relative;z-index:2;text-align:center;padding:0 1.5rem 4.5rem;color:var(--paper)}
+.interlude-text .big{font-family:var(--disp);font-weight:800;text-transform:uppercase;font-size:clamp(2.6rem,7vw,5rem);line-height:.95;text-shadow:0 2px 14px rgba(26,35,56,.45)}
+.interlude-text .small{font-family:var(--serif);font-style:italic;font-size:clamp(1.05rem,2.4vw,1.4rem);margin-top:.9rem;text-shadow:0 1px 8px rgba(26,35,56,.5)}
+
+/* ---------- BUDGET ---------- */
+.budget{background:var(--ink);color:var(--paper);padding:clamp(3.5rem,8vh,6rem) 0}
+.budget .sec-head h2{color:var(--paper)}
+.budget .sec-head .tag{color:var(--gold)}
+.budget .rule{background:var(--paper)}
+.ledger{margin-top:2.6rem;border:2px solid var(--paper);border-radius:10px;overflow:hidden}
+.ledger table{width:100%;border-collapse:collapse}
+.ledger th{font-family:var(--disp);font-weight:600;font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;text-align:left;padding:1rem 1.4rem;background:rgba(244,239,226,.08);border-bottom:2px solid var(--paper)}
+.ledger td{padding:1rem 1.4rem;border-bottom:1px solid rgba(244,239,226,.16);vertical-align:top}
+.ledger tr:last-child td{border-bottom:none}
+.ledger .cat{font-family:var(--disp);font-weight:700;font-size:1.15rem;letter-spacing:.05em;text-transform:uppercase}
+.ledger .amt{font-family:var(--disp);font-weight:700;font-size:1.3rem;color:var(--gold);white-space:nowrap}
+.ledger .note{color:rgba(244,239,226,.66);font-size:.95rem}
+.ledger .total td{background:rgba(239,182,91,.12);border-top:2px solid var(--paper)}
+.ledger .total .amt{font-size:1.7rem}
+.split{margin-top:1.2rem;font-family:var(--serif);font-style:italic;color:var(--ridge5);text-align:right}
+
+/* ---------- PACKING ---------- */
+.pack{padding:clamp(3.5rem,8vh,6rem) 0}
+.pack-grid{margin-top:2.6rem;display:grid;grid-template-columns:1.2fr .8fr;gap:2.5rem;align-items:start}
+.checklist{border:2px solid var(--ink);border-radius:10px;overflow:hidden;background:#fffdf6}
+.checklist header{background:var(--ink);color:var(--paper);padding:.85rem 1.3rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.checklist header .h-title{font-family:var(--disp);font-weight:600;letter-spacing:.3em;text-transform:uppercase;font-size:.78rem}
+.checklist header .h-count{font-family:var(--disp);font-weight:700;font-size:.95rem;letter-spacing:.08em;color:var(--gold)}
+.pack-progress{height:5px;background:rgba(35,47,75,.12)}
+.pack-progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--amber),var(--gold));transition:width .35s ease}
+.group-label{font-family:var(--disp);font-weight:700;font-size:.68rem;letter-spacing:.32em;text-transform:uppercase;color:var(--rose);padding:1.05rem 1.3rem .35rem;display:flex;align-items:center;gap:.7rem}
+.group-label::after{content:"";flex:1;height:1px;background:var(--ridge4)}
+.check{appearance:none;-webkit-appearance:none;display:flex;align-items:flex-start;gap:1rem;width:100%;padding:.8rem 1.3rem;margin:0;background:none;border:none;border-bottom:1px solid var(--paper-dim);font:inherit;color:inherit;text-align:left;cursor:pointer;user-select:none;transition:background .15s}
+.check:last-of-type{border-bottom:none}
+.check:hover{background:var(--paper)}
+.check .box{width:23px;height:23px;margin-top:.1rem;border:2px solid var(--ink);border-radius:6px;flex:none;display:grid;place-items:center;background:var(--paper);transition:background .15s,transform .15s}
+.check .box svg{opacity:0;transform:scale(.5);transition:opacity .15s,transform .2s}
+.check.done .box{background:var(--amber);transform:rotate(-4deg)}
+.check.done .box svg{opacity:1;transform:scale(1)}
+.check.done .t{text-decoration:line-through;opacity:.45}
+.check .t{font-weight:600;line-height:1.35}
+.check .why{display:block;font-family:var(--serif);font-style:italic;font-weight:400;font-size:.88rem;color:#6a7390;margin-top:.1rem}
+.check.done .why{opacity:.45}
+.prep-card{border:2px solid var(--ink);border-radius:10px;padding:1.6rem 1.5rem;background:var(--paper-dim)}
+.prep-card h4{font-family:var(--disp);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:1.1rem;margin-bottom:.9rem}
+.prep-card li{list-style:none;padding:.55rem 0;border-top:1px dashed var(--ridge3);display:flex;gap:.7rem;align-items:baseline}
+.prep-card li::before{content:"→";color:var(--rose);font-weight:700}
+.prep-card .fine{margin-top:1rem;font-size:.88rem;color:#5a6480;font-family:var(--serif);font-style:italic}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--ink-deep);color:var(--ridge5);overflow:hidden}
+footer .ridgeline{display:block;width:100%;height:120px}
+footer .wrap{padding:2.2rem 1.5rem 3rem;text-align:center}
+footer .sig{font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--paper)}
+footer .tiny{font-family:var(--disp);font-weight:500;letter-spacing:.32em;text-transform:uppercase;font-size:.7rem;margin-top:1rem;opacity:.55}
+
+/* ---------- REVEAL ---------- */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .sun{animation:none}
+  .reveal{opacity:1;transform:none;transition:none}
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:760px){
+  .stats .wrap{grid-template-columns:repeat(2,1fr)}
+  .stat{border-right:none;border-bottom:1px solid rgba(244,239,226,.18)}
+  .stat:nth-child(odd){border-right:1px solid rgba(244,239,226,.18)}
+  .stat:nth-child(5){grid-column:1 / -1;border-bottom:none}
+  .stop{grid-template-columns:1fr;gap:.15rem}
+  .hero-ticket{flex-wrap:wrap;border-radius:14px 14px 0 0;max-width:92%}
+  .hero-ticket div{flex:1 1 40%;border-bottom:1px dashed var(--ink)}
+  .pack-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="hero-sky"><div class="sun" aria-hidden="true"></div></div>
+  <div class="hero-ridges" aria-hidden="true">
+    <svg viewBox="0 0 1440 560" preserveAspectRatio="xMidYMax slice">
+      <defs>
+        <linearGradient id="hazeG" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#f4efe2" stop-opacity=".9"/>
+          <stop offset="1" stop-color="#f4efe2" stop-opacity="0"/>
+        </linearGradient>
+        <radialGradient id="glowG" cx=".5" cy=".5" r=".5">
+          <stop offset="0" stop-color="#efb65b" stop-opacity=".5"/>
+          <stop offset="1" stop-color="#efb65b" stop-opacity="0"/>
+        </radialGradient>
+        <g id="fir-a">
+          <path d="M0 -64 C1 -60 2 -57 3.5 -54 L1.5 -54 C3 -50 4.5 -47 6 -44 L3.5 -44 C5.5 -39 7.5 -35 9 -32 L6 -32 C8 -27 10 -23 12 -19 L8.5 -19 C11 -14 13 -10 15 -6 L2.5 -6 L2.5 0 L-2.5 0 L-2.5 -6 L-15 -6 C-13 -10 -11 -14 -8.5 -19 L-12 -19 C-10 -23 -8 -27 -6 -32 L-9 -32 C-7.5 -35 -5.5 -39 -3.5 -44 L-6 -44 C-4.5 -47 -3 -50 -1.5 -54 L-3.5 -54 C-2 -57 -1 -60 0 -64 Z"/>
+        </g>
+        <g id="fir-b"><use href="#fir-a" transform="scale(.66,1.14)"/></g>
+        <g id="snag">
+          <path d="M-1.3 0 L-1.1 -30 -8 -37 -7 -39 -1 -33 -.8 -44 -6 -51 -5 -53 -.6 -48 0 -60 .8 -48 6 -55 7 -53 1 -45 1.1 -37 8 -43 9 -41 1.3 -33 1.5 0 Z"/>
+        </g>
+        <g id="oak">
+          <path d="M-1.6 0 L-1.6 -13 C-9 -11 -14.5 -15 -13.5 -21 C-18.5 -23 -17.5 -30 -12.5 -32 C-13.5 -38 -7.5 -42.5 -2 -40.5 C.5 -45.5 7 -45.5 9 -40.5 C15 -42 19.5 -37 17.5 -31.5 C22.5 -28.5 21.5 -21.5 16 -20.5 C18 -14.5 10.5 -10.5 1.6 -12.5 L1.6 0 Z"/>
+        </g>
+      </defs>
+
+      <!-- sun glow bleeding into the haze -->
+      <ellipse cx="720" cy="245" rx="460" ry="150" fill="url(#glowG)"/>
+
+      <!-- ridge 1, farthest -->
+      <path fill="#c9d4e4" d="M0 235 C60 225 110 208 170 212 C230 216 270 232 330 228 C390 224 430 200 490 198 C550 196 600 214 660 218 C720 222 770 205 830 200 C890 195 940 212 1000 216 C1060 220 1110 202 1170 198 C1230 194 1290 214 1350 218 C1390 220 1420 214 1440 210 L1440 560 0 560 Z"/>
+      <rect x="0" y="226" width="1440" height="76" fill="url(#hazeG)" opacity=".6"/>
+
+      <!-- ridge 2 -->
+      <path fill="#9dafc9" d="M0 292 C70 280 120 262 185 268 C250 274 300 292 365 288 C430 284 480 258 545 256 C610 254 660 276 725 280 C790 284 840 262 905 258 C970 254 1020 274 1085 278 C1150 282 1200 260 1265 256 C1330 252 1390 272 1440 276 L1440 560 0 560 Z"/>
+      <rect x="0" y="284" width="1440" height="72" fill="url(#hazeG)" opacity=".5"/>
+
+      <!-- ridge 3, first hints of trees on the crest -->
+      <path fill="#6d80a4" d="M0 348 C55 340 100 318 160 322 C220 326 265 348 325 344 C385 340 430 314 495 312 C560 310 610 334 675 338 C740 342 790 318 855 314 C920 310 970 332 1035 336 C1100 340 1155 316 1220 312 C1285 308 1350 330 1440 334 L1440 560 0 560 Z"/>
+      <g fill="#5d7095">
+        <use href="#fir-a" transform="translate(128,325) scale(.2)"/><use href="#fir-b" transform="translate(146,323) scale(.22)"/><use href="#fir-a" transform="translate(166,322) scale(.19)"/><use href="#fir-b" transform="translate(186,324) scale(.21)"/>
+        <use href="#fir-b" transform="translate(468,315) scale(.2)"/><use href="#fir-a" transform="translate(488,313) scale(.22)"/><use href="#fir-a" transform="translate(508,313) scale(.19)"/><use href="#fir-b" transform="translate(528,315) scale(.21)"/>
+        <use href="#fir-a" transform="translate(828,317) scale(.2)"/><use href="#fir-b" transform="translate(848,315) scale(.22)"/><use href="#fir-a" transform="translate(868,314) scale(.2)"/>
+        <use href="#fir-b" transform="translate(1196,315) scale(.21)"/><use href="#fir-a" transform="translate(1216,313) scale(.19)"/><use href="#fir-a" transform="translate(1236,313) scale(.22)"/>
+      </g>
+      <rect x="0" y="340" width="1440" height="70" fill="url(#hazeG)" opacity=".4"/>
+
+      <!-- ridge 4 -->
+      <path fill="#48597f" d="M0 405 C65 395 115 372 180 377 C245 382 295 404 360 400 C425 396 475 368 540 366 C605 364 655 390 720 394 C785 398 835 372 900 368 C965 364 1015 388 1080 392 C1145 396 1200 370 1270 366 C1340 362 1395 386 1440 390 L1440 560 0 560 Z"/>
+      <g fill="#3d4e73">
+        <use href="#fir-a" transform="translate(150,381) scale(.3)"/><use href="#fir-b" transform="translate(178,378) scale(.32)"/><use href="#fir-a" transform="translate(206,378) scale(.28)"/><use href="#fir-b" transform="translate(232,380) scale(.3)"/>
+        <use href="#fir-b" transform="translate(512,369) scale(.3)"/><use href="#fir-a" transform="translate(540,367) scale(.33)"/><use href="#snag" transform="translate(566,368) scale(.3)"/><use href="#fir-a" transform="translate(590,370) scale(.29)"/>
+        <use href="#fir-a" transform="translate(872,370) scale(.31)"/><use href="#fir-b" transform="translate(900,369) scale(.29)"/><use href="#fir-a" transform="translate(928,370) scale(.32)"/>
+        <use href="#fir-b" transform="translate(1242,368) scale(.3)"/><use href="#fir-a" transform="translate(1270,367) scale(.32)"/><use href="#fir-b" transform="translate(1298,368) scale(.28)"/>
+      </g>
+      <rect x="0" y="398" width="1440" height="66" fill="url(#hazeG)" opacity=".3"/>
+
+      <!-- ridge 5, treeline getting real -->
+      <path fill="#2e3e63" d="M0 462 C70 452 120 428 190 432 C260 436 310 460 380 456 C450 452 500 424 570 422 C640 420 690 448 760 452 C830 456 880 430 950 426 C1020 422 1070 446 1140 450 C1210 454 1265 428 1335 425 C1395 423 1420 448 1440 450 L1440 560 0 560 Z"/>
+      <g fill="#243356">
+        <use href="#fir-a" transform="translate(60,456) scale(.48)"/><use href="#fir-b" transform="translate(150,437) scale(.52)"/><use href="#fir-a" transform="translate(230,434) scale(.46)"/><use href="#fir-b" transform="translate(320,453) scale(.5)"/><use href="#fir-a" transform="translate(420,449) scale(.47)"/><use href="#fir-b" transform="translate(500,431) scale(.53)"/><use href="#fir-a" transform="translate(575,424) scale(.5)"/><use href="#oak" transform="translate(650,433) scale(.5)"/><use href="#fir-a" transform="translate(740,451) scale(.46)"/><use href="#fir-b" transform="translate(830,445) scale(.5)"/><use href="#fir-a" transform="translate(910,429) scale(.52)"/><use href="#fir-b" transform="translate(985,425) scale(.47)"/><use href="#fir-a" transform="translate(1060,439) scale(.5)"/><use href="#fir-b" transform="translate(1150,451) scale(.46)"/><use href="#fir-a" transform="translate(1230,433) scale(.52)"/><use href="#fir-b" transform="translate(1310,427) scale(.49)"/><use href="#fir-a" transform="translate(1400,445) scale(.48)"/>
+      </g>
+
+      <!-- foreground ridge, full silhouettes -->
+      <path fill="#1a2338" d="M0 512 C60 505 110 484 175 488 C240 492 290 512 355 508 C420 504 470 478 540 476 C610 474 660 500 730 504 C800 508 850 484 920 480 C990 476 1040 500 1110 504 C1180 508 1235 484 1305 481 C1370 478 1415 500 1440 502 L1440 560 0 560 Z"/>
+      <g fill="#10172a">
+        <use href="#fir-a" transform="translate(40,513) scale(.85)"/><use href="#fir-b" transform="translate(95,506) scale(.95)"/><use href="#fir-a" transform="translate(140,490) scale(1)"/><use href="#snag" transform="translate(186,490) scale(.9)"/><use href="#fir-b" transform="translate(232,495) scale(.88)"/><use href="#fir-a" transform="translate(300,509) scale(.82)"/><use href="#fir-b" transform="translate(370,508) scale(.9)"/><use href="#fir-a" transform="translate(432,495) scale(.95)"/><use href="#fir-b" transform="translate(482,482) scale(1.05)"/><use href="#fir-a" transform="translate(532,478) scale(1)"/><use href="#oak" transform="translate(592,481) scale(1.05)"/><use href="#fir-b" transform="translate(660,493) scale(.9)"/><use href="#fir-a" transform="translate(722,504) scale(.85)"/><use href="#fir-b" transform="translate(782,506) scale(.92)"/><use href="#fir-a" transform="translate(845,492) scale(1)"/><use href="#fir-b" transform="translate(905,482) scale(1.02)"/><use href="#snag" transform="translate(952,481) scale(.95)"/><use href="#fir-a" transform="translate(1010,487) scale(.9)"/><use href="#fir-b" transform="translate(1075,502) scale(.86)"/><use href="#fir-a" transform="translate(1140,504) scale(.9)"/><use href="#fir-b" transform="translate(1200,492) scale(.96)"/><use href="#fir-a" transform="translate(1256,484) scale(1.02)"/><use href="#oak" transform="translate(1305,484) scale(.95)"/><use href="#fir-b" transform="translate(1362,490) scale(.9)"/><use href="#fir-a" transform="translate(1420,501) scale(.85)"/>
+      </g>
+
+      <!-- birds -->
+      <g stroke="#232f4b" stroke-width="2.4" fill="none" stroke-linecap="round">
+        <path d="M420,90 q9,-9 18,0 q9,-9 18,0"/>
+        <path d="M452,110 q7,-7 14,0 q7,-7 14,0"/>
+        <path d="M1010,66 q8,-8 16,0 q8,-8 16,0"/>
+        <path d="M1052,84 q6,-6 12,0 q6,-6 12,0"/>
+      </g>
+    </svg>
+  </div>
+  <div class="hero-inner">
+    <p class="eyebrow">Aiden <span class="dot">✦</span> Pranjal <span class="dot">✦</span> Welcome Back</p>
+    <h1>The Blue<br>Ridge</h1>
+    <p class="sub">Forty eight hours of rivers, ridgelines, and one long sunset, Georgia to Carolina and back.</p>
+  </div>
+  <div class="hero-ticket" role="group" aria-label="Trip details">
+    <div><span class="k">Depart</span><span class="v">Aug 22</span></div>
+    <div><span class="k">Return</span><span class="v">Aug 23</span></div>
+    <div><span class="k">Basecamp</span><span class="v">Cabin Kisa</span></div>
+    <div><span class="k">Check in</span><span class="v">3:00 PM</span></div>
+  </div>
+</header>
+
+<!-- ================= STATS ================= -->
+<section class="stats" aria-label="Trip by the numbers">
+  <div class="wrap">
+    <div class="stat"><div class="n">2</div><div class="l">Days</div></div>
+    <div class="stat"><div class="n">565</div><div class="l">Miles</div></div>
+    <div class="stat"><div class="n">5,892'</div><div class="l">Craggy Pinnacle</div></div>
+    <div class="stat"><div class="n">8:18</div><div class="l">Sunset</div></div>
+    <div class="stat"><div class="n">$543</div><div class="l">All In</div></div>
+  </div>
+</section>
+
+<!-- ================= DAY 1 ================= -->
+<section class="day" id="day1">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Day One</h2>
+      <span class="tag">Nature &amp; exploration, water first, altitude later</span>
+    </div>
+    <div class="rule reveal"></div>
+
+    <div class="timeline">
+      <div class="stop reveal">
+        <div class="time">7:00 AM</div>
+        <div>
+          <h3>Breakfast &amp; roll out</h3>
+          <p>Early breakfast at home, then wheels turning north out of Bryn House. Coffee mandatory.</p>
+          <span class="loc">Bryn House</span>
+        </div>
+      </div>
+
+      <div class="stop big reveal">
+        <div class="time">9:00 AM</div>
+        <div>
+          <h3>Shoot the 'Hooch <span class="badge">surprise no. 1</span></h3>
+          <p>Two hours floating the Chattahoochee through Alpine Helen. Tube, shuttle, and life jackets included. Take the long ride, it is the same price.</p>
+          <span class="loc">Cool River Tubing · Chattahoochee Outpost</span>
+          <figure class="photocard tilt-r">
+            <div class="ph"><img src="https://www.coolrivertubing.com/content/userfiles/images/CRT_1275%20(1).JPG" alt="Tubers floating down the Chattahoochee River in Helen, Georgia" loading="lazy" onerror="this.closest('figure').style.display='none'"></div>
+            <figcaption><span>Shooting the 'Hooch</span><span class="cred">Cool River Tubing</span></figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="stop reveal">
+        <div class="time">1:45 PM</div>
+        <div>
+          <h3>Lunch in Brevard</h3>
+          <p>Tucked in an alley off Main Street. Get the pretzel board, split the coconut cake, walk it off among the white squirrels.</p>
+          <span class="loc">The Square Root · Times Arcade Alley</span>
+        </div>
+      </div>
+
+      <div class="stop reveal">
+        <div class="time">3:00 PM</div>
+        <div>
+          <h3>Gas up, head into Pisgah</h3>
+          <p>Last fuel before the forest. US 276 north into the trees.</p>
+        </div>
+      </div>
+
+      <div class="stop big reveal">
+        <div class="time">3:20 PM</div>
+        <div>
+          <h3>Sliding Rock</h3>
+          <p>Sixty feet of natural waterslide into an eight foot pool of 55 degree mountain water. It will take your breath. That is the point. Water shoes on, phones far away.</p>
+          <span class="loc">Sliding Rock · Pisgah National Forest</span>
+          <figure class="photocard">
+            <div class="ph"><img src="https://www.visitnc.com/sites/default/files/2025-02/Sliding%20Rock.jpg" alt="Sliders riding the 60-foot natural waterslide at Sliding Rock in Pisgah National Forest" loading="lazy" onerror="this.closest('figure').style.display='none'"></div>
+            <figcaption><span>11,000 gallons a minute</span><span class="cred">Visit NC</span></figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="stop reveal">
+        <div class="time">5:35 PM</div>
+        <div>
+          <h3>Check in at Cabin Kisa</h3>
+          <p>Dry clothes, warm layers, headlamps in the bag. Rest a beat before the evening climb.</p>
+          <span class="loc">587 Clarks Branch Rd</span>
+        </div>
+      </div>
+
+      <div class="stop reveal">
+        <div class="time">6:25 PM</div>
+        <div>
+          <h3>Drive the Parkway north</h3>
+          <p>Up the Blue Ridge Parkway to milepost 364.1, through the tunnel, left into the Craggy Dome lot.</p>
+          <span class="loc">Craggy Dome Overlook · MP 364.1</span>
+        </div>
+      </div>
+
+      <div class="stop big reveal">
+        <div class="time">7:40 PM</div>
+        <div>
+          <h3>Climb Craggy Pinnacle</h3>
+          <p>Twenty minutes up through a rhododendron tunnel to a 5,892 foot summit ringed by a low stone wall. Mountains in every direction, rows of blue running west toward Tennessee.</p>
+          <figure class="photocard tilt-r">
+            <div class="ph"><img src="https://www.blueridgeparkway.org/wp-content/uploads/2017/06/Craggy_Gardens_image-e1525108031623.jpg" alt="Rhododendron blooms and misty peaks at Craggy Gardens on the Blue Ridge Parkway" loading="lazy" onerror="this.closest('figure').style.display='none'"></div>
+            <figcaption><span>The Craggies, milepost 364</span><span class="cred">BRP Association</span></figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="stop big reveal">
+        <div class="time">8:18 PM</div>
+        <div>
+          <h3>The sunset <span class="badge">the whole reason</span></h3>
+          <p>Stay for the color. Headlamps on before re-entering the trees, down by 8:45, and let the Parkway carry you home slow.</p>
+        </div>
+      </div>
+
+      <div class="stop reveal">
+        <div class="time">10:30 PM</div>
+        <div>
+          <h3>Wacky Mac at the cabin</h3>
+          <p>The finest dining in all of Clarks Branch. Lights out early. Tomorrow is a city day.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INTERLUDE ================= -->
+<section class="interlude" aria-label="Sunset at Craggy Pinnacle">
+  <div class="sun2" aria-hidden="true"></div>
+  <svg viewBox="0 0 1440 380" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <!-- first stars -->
+    <g fill="#f4efe2">
+      <circle cx="210" cy="28" r="1.4" opacity=".55"/>
+      <circle cx="410" cy="14" r="1.1" opacity=".4"/>
+      <circle cx="760" cy="10" r="1.3" opacity=".45"/>
+      <circle cx="1096" cy="24" r="1.5" opacity=".55"/>
+      <circle cx="1298" cy="42" r="1.1" opacity=".4"/>
+    </g>
+
+    <!-- ridge 1 -->
+    <path fill="#7a4a68" opacity=".85" d="M0 150 C80 140 140 118 215 122 C290 126 345 148 420 144 C495 140 550 112 625 110 C700 108 755 132 830 136 C905 140 960 116 1035 112 C1110 108 1165 130 1240 134 C1315 138 1380 118 1440 122 L1440 380 0 380 Z"/>
+
+    <!-- ridge 2 with distant treeline -->
+    <path fill="#4d3a5e" d="M0 205 C75 196 130 172 205 176 C280 180 335 204 410 200 C485 196 540 168 615 166 C690 164 745 190 820 194 C895 198 950 172 1025 168 C1100 164 1160 188 1235 192 C1310 196 1375 174 1440 178 L1440 380 0 380 Z"/>
+    <g fill="#3f2f50">
+      <use href="#fir-b" transform="translate(178,179) scale(.22)"/><use href="#fir-a" transform="translate(198,177) scale(.2)"/><use href="#fir-b" transform="translate(218,177) scale(.23)"/>
+      <use href="#fir-a" transform="translate(588,169) scale(.21)"/><use href="#fir-b" transform="translate(608,167) scale(.23)"/><use href="#fir-a" transform="translate(628,167) scale(.2)"/>
+      <use href="#fir-b" transform="translate(998,171) scale(.22)"/><use href="#fir-a" transform="translate(1018,169) scale(.2)"/><use href="#fir-b" transform="translate(1038,169) scale(.23)"/>
+    </g>
+
+    <!-- ridge 3 -->
+    <path fill="#2e2a48" d="M0 262 C80 254 135 228 215 232 C295 236 350 262 430 258 C510 254 565 224 645 222 C725 220 780 248 860 252 C940 256 995 230 1075 226 C1155 222 1215 246 1295 250 C1370 253 1415 236 1440 238 L1440 380 0 380 Z"/>
+    <g fill="#232041">
+      <use href="#fir-a" transform="translate(88,251) scale(.4)"/><use href="#fir-b" transform="translate(168,236) scale(.44)"/><use href="#fir-a" transform="translate(248,234) scale(.4)"/><use href="#fir-b" transform="translate(340,260) scale(.38)"/><use href="#fir-a" transform="translate(470,257) scale(.42)"/><use href="#fir-b" transform="translate(560,228) scale(.44)"/><use href="#snag" transform="translate(628,224) scale(.4)"/><use href="#fir-a" transform="translate(700,226) scale(.42)"/><use href="#fir-b" transform="translate(800,247) scale(.38)"/><use href="#fir-a" transform="translate(905,252) scale(.4)"/><use href="#fir-b" transform="translate(1010,232) scale(.44)"/><use href="#fir-a" transform="translate(1100,227) scale(.42)"/><use href="#fir-b" transform="translate(1200,244) scale(.38)"/><use href="#fir-a" transform="translate(1310,250) scale(.4)"/>
+    </g>
+
+    <!-- foreground ridge, the summit -->
+    <path fill="#1a2338" d="M0 322 C70 315 125 296 200 300 C275 304 330 322 405 318 C480 314 535 292 615 290 C695 288 750 312 825 316 C900 320 955 298 1030 294 C1105 290 1160 312 1235 316 C1305 319 1375 302 1440 305 L1440 380 0 380 Z"/>
+    <g fill="#10162a">
+      <use href="#fir-a" transform="translate(50,321) scale(.72)"/><use href="#fir-b" transform="translate(112,307) scale(.8)"/><use href="#fir-a" transform="translate(172,301) scale(.76)"/><use href="#fir-b" transform="translate(252,305) scale(.7)"/><use href="#fir-a" transform="translate(332,321) scale(.68)"/><use href="#fir-b" transform="translate(412,318) scale(.74)"/><use href="#fir-a" transform="translate(474,306) scale(.8)"/><use href="#fir-b" transform="translate(544,295) scale(.76)"/><use href="#snag" transform="translate(600,291) scale(.8)"/><use href="#fir-a" transform="translate(780,314) scale(.7)"/><use href="#fir-b" transform="translate(850,317) scale(.74)"/><use href="#fir-a" transform="translate(920,304) scale(.78)"/><use href="#fir-b" transform="translate(988,297) scale(.72)"/><use href="#fir-a" transform="translate(1090,294) scale(.78)"/><use href="#fir-b" transform="translate(1162,311) scale(.7)"/><use href="#fir-a" transform="translate(1240,317) scale(.72)"/><use href="#fir-b" transform="translate(1322,310) scale(.76)"/><use href="#fir-a" transform="translate(1402,305) scale(.72)"/>
+    </g>
+
+    <!-- the two of you, watching -->
+    <g fill="#0d1322" transform="translate(692,293) scale(1.2)">
+      <path d="M-7 0 C-7 -6 -6 -10 -4.5 -12 C-6 -13 -6.5 -15 -5.5 -16.5 C-4.5 -18 -2.5 -18 -1.5 -16.5 C-.7 -15.3 -1 -13.2 -2.2 -12.2 C-1 -10.5 -.5 -6 -.5 0 Z"/>
+      <path d="M1 0 C1 -7 2 -11.5 3.6 -13.6 C2.2 -14.7 1.8 -16.8 2.9 -18.4 C4 -20 6.2 -20 7.3 -18.4 C8.2 -17 7.8 -14.8 6.5 -13.7 C8 -11.7 8.8 -7 8.8 0 Z"/>
+      <path d="M-1.6 -8.5 C-.4 -9.3 .6 -9.4 1.8 -8.8 L1.6 -7.2 C.6 -7.8 -.4 -7.8 -1.4 -7.1 Z"/>
+    </g>
+  </svg>
+  <div class="interlude-text">
+    <div class="big">8:18 PM<br>Craggy Pinnacle</div>
+    <div class="small">Bring the jackets. Stay for the afterglow.</div>
+  </div>
+</section>
+
+<!-- ================= DAY 2 ================= -->
+<section class="day" id="day2">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Day Two</h2>
+      <span class="tag">A slow morning, gardens, and the city before home</span>
+    </div>
+    <div class="rule reveal"></div>
+
+    <div class="timeline">
+      <div class="stop reveal">
+        <div class="time">8:30 AM</div>
+        <div>
+          <h3>Wake, pack, check out</h3>
+          <p>No alarms before eight. Leave the cabin better than you found it.</p>
+          <span class="loc">Cabin Kisa</span>
+        </div>
+      </div>
+
+      <div class="stop reveal">
+        <div class="time">9:45 AM</div>
+        <div>
+          <h3>Breakfast &amp; coffee</h3>
+          <p>A proper sit-down start before a day on your feet.</p>
+          <span class="loc">Liberty House Coffee &amp; Café</span>
+        </div>
+      </div>
+
+      <div class="stop big reveal">
+        <div class="time">11:00 AM</div>
+        <div>
+          <h3>The North Carolina Arboretum</h3>
+          <p>434 acres off the Parkway. The Bonsai Exhibition Garden is the do-not-miss, then wander the cultivated gardens as far as your legs vote to go. Member parking, flash the card.</p>
+          <span class="loc">Bent Creek · Blue Ridge Parkway</span>
+          <div class="photo-duo">
+            <figure class="photocard">
+              <div class="ph"><img src="https://ncarboretum.org/wp-content/uploads/2026/06/BonsaiTree2_web-550x350-1.jpg" alt="A bonsai tree in the Bonsai Exhibition Garden at the North Carolina Arboretum" loading="lazy" onerror="this.closest('figure').style.display='none'"></div>
+              <figcaption><span>The Bonsai Garden</span><span class="cred">NC Arboretum</span></figcaption>
+            </figure>
+            <figure class="photocard tilt-r">
+              <div class="ph"><img src="https://ncarboretum.org/wp-content/uploads/2026/06/20160505_moppenheim_OppenheimPhoto-NCArboretum-Spring-2016-0715.jpg" alt="Cultivated garden beds in bloom at the North Carolina Arboretum" loading="lazy" onerror="this.closest('figure').style.display='none'"></div>
+              <figcaption><span>The cultivated gardens</span><span class="cred">NC Arboretum</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <div class="stop reveal">
+        <div class="time">1:00 PM</div>
+        <div>
+          <h3>Lunch at Mehfil</h3>
+          <p>Indian on Biltmore Avenue, right in the heart of downtown.</p>
+          <span class="loc">5 Biltmore Ave</span>
+        </div>
+      </div>
+
+      <div class="stop big reveal">
+        <div class="time">2:15 PM</div>
+        <div>
+          <h3>Asheville on foot</h3>
+          <p>The River Arts District first: working studios in old industrial buildings, the NC Glass Center, and one rule, pick out a small gift for each other. Then back downtown for the Grove Arcade and Wall Street.</p>
+          <span class="loc">River Arts District → Grove Arcade → Wall St</span>
+        </div>
+      </div>
+
+      <div class="stop big reveal">
+        <div class="time">5:00 PM</div>
+        <div>
+          <h3>Dinner at Plant <span class="badge">reservation under Aiden</span></h3>
+          <p>First seating at Asheville's standard-bearer vegan kitchen. Order more than feels reasonable.</p>
+          <span class="loc">165 Merrimon Ave</span>
+        </div>
+      </div>
+
+      <div class="stop reveal">
+        <div class="time">6:30 PM</div>
+        <div>
+          <h3>Point the car south</h3>
+          <p>Golden hour through the mountains, playlist queued.</p>
+        </div>
+      </div>
+
+      <div class="stop reveal">
+        <div class="time">9:30 PM</div>
+        <div>
+          <h3>Home</h3>
+          <p>Back at Bryn House, sunburned in the good way.</p>
+          <span class="loc">Bryn House</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BUDGET ================= -->
+<section class="budget" id="budget">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>The Ledger</h2>
+      <span class="tag">shared, tracked, honest</span>
+    </div>
+    <div class="rule reveal"></div>
+
+    <div class="ledger reveal">
+      <table>
+        <thead>
+          <tr><th>Category</th><th>Estimated</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="cat">Lodging</td><td class="amt">$150</td><td class="note">Cabin Kisa, total for the stay</td></tr>
+          <tr><td class="cat">Gas / Transport</td><td class="amt">$60</td><td class="note">≈565 miles round trip</td></tr>
+          <tr><td class="cat">Dining</td><td class="amt">$287</td><td class="note">All meals, Square Root to Plant</td></tr>
+          <tr><td class="cat">Activities</td><td class="amt">$46</td><td class="note">Tubing, Sliding Rock, entry fees</td></tr>
+          <tr class="total"><td class="cat">Total</td><td class="amt">$543</td><td class="note">≈ $272 each</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="split reveal">Free the whole way through: the Parkway, Craggy Pinnacle, the sunset, and the company.</p>
+  </div>
+</section>
+
+<!-- ================= PACKING ================= -->
+<section class="pack" id="pack">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>Pack List</h2>
+      <span class="tag">tap to check off</span>
+    </div>
+    <div class="rule reveal"></div>
+
+    <div class="pack-grid">
+      <div class="checklist reveal" aria-label="Gear checklist">
+        <header>
+          <span class="h-title">Gear</span>
+          <span class="h-count"><span id="packCount">0</span> / <span id="packTotal">12</span> packed</span>
+        </header>
+        <div class="pack-progress"><i id="packBar"></i></div>
+
+        <div class="group-label">River days</div>
+        <button class="check"><span class="box"><svg width="14" height="11" viewBox="0 0 14 11" fill="none"><path d="M1 5.5 5 9.5 13 1.5" stroke="#f4efe2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">Bathing suits<span class="why">Worn under clothes saves two changing-room stops</span></span></button>
+        <button class="check"><span class="box"><svg width="14" height="11" viewBox="0 0 14 11" fill="none"><path d="M1 5.5 5 9.5 13 1.5" stroke="#f4efe2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">Water shoes<span class="why">Both stops are all rock underfoot</span></span></button>
+        <button class="check"><span class="box"><svg width="14" height="11" viewBox="0 0 14 11" fill="none"><path d="M1 5.5 5 9.5 13 1.5" stroke="#f4efe2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">Old shorts for Sliding Rock<span class="why">The rock is famous for eating fabric</span></span></button>
+        <button class="check"><span class="box"><svg width="14" height="11" viewBox="0 0 14 11" fill="none"><path d="M1 5.5 5 9.5 13 1.5" stroke="#f4efe2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">Towels + full change of clothes<span class="why">You go straight from the river to lunch</span></span></button>
+        <button class="check"><span class="box"><svg width="14" height="11" viewBox="0 0 14 11" fill="none"><path d="M1 5.5 5 9.5 13 1.5" stroke="#f4efe2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">Trash bag for wet everything<span class="why">The car will thank you by Brevard</span></span></button>
+
+        <div class="group-label">Summit night</div>
+        <button class="check"><span class="box"><svg width="14" height="11" viewBox="0 0 14 11" fill="none"><path d="M1 5.5 5 9.5 13 1.5" stroke="#f4efe2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">Two headlamps, fresh batteries<span class="why">The rhododendron tunnel goes black at dusk</span></span></button>
+        <button class="check"><span class="box"><svg width="14" height="11" viewBox="0 0 14 11" fill="none"><path d="M1 5.5 5 9.5 13 1.5" stroke="#f4efe2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">Real jackets<span class="why">59 degrees and windy at 5,892 feet, even in August</span></span></button>
+        <button class="check"><span class="box"><svg width="14" height="11" viewBox="0 0 14 11" fill="none"><path d="M1 5.5 5 9.5 13 1.5" stroke="#f4efe2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">Closed toed shoes with tread<span class="why">Roots and loose rock on the Pinnacle trail</span></span></button>
+        <button class="check"><span class="box"><svg width="14" height="11" viewBox="0 0 14 11" fill="none"><path d="M1 5.5 5 9.5 13 1.5" stroke="#f4efe2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">Summit picnic + blanket<span class="why">Dinner at 8:18 beats any reservation</span></span></button>
+
+        <div class="group-label">The whole way</div>
+        <button class="check"><span class="box"><svg width="14" height="11" viewBox="0 0 14 11" fill="none"><path d="M1 5.5 5 9.5 13 1.5" stroke="#f4efe2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">Water bottles + road snacks<span class="why">Nothing is open past Pisgah Inn or on the Parkway</span></span></button>
+        <button class="check"><span class="box"><svg width="14" height="11" viewBox="0 0 14 11" fill="none"><path d="M1 5.5 5 9.5 13 1.5" stroke="#f4efe2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">Battery pack + car charger<span class="why">Phones drain fast hunting for signal in the forest</span></span></button>
+        <button class="check"><span class="box"><svg width="14" height="11" viewBox="0 0 14 11" fill="none"><path d="M1 5.5 5 9.5 13 1.5" stroke="#f4efe2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="t">Sunscreen + Arboretum member card<span class="why">Two hours on open water, and free parking is riding on that card</span></span></button>
+      </div>
+
+      <div class="prep-card reveal">
+        <h4>Before we go</h4>
+        <ul>
+          <li>Buy tubing tickets online and sign both waivers before Saturday</li>
+          <li>Confirm the reservation at Plant, Asheville</li>
+          <li>Check the weather for Aug 22, 2026, and radar before the summit</li>
+          <li>Download offline maps, no signal past Bull Gap or in Pisgah</li>
+        </ul>
+        <p class="fine">The summit runs 15 to 20 degrees cooler than town and the wind is honest up there. Bring the jackets even though it is August.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <svg class="ridgeline" viewBox="0 0 1440 130" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <rect width="1440" height="130" fill="#f4efe2"/>
+    <path fill="#48597f" opacity=".35" d="M0 78 C100 72 170 58 260 62 C350 66 420 80 510 76 C600 72 670 54 760 52 C850 50 920 70 1010 74 C1100 78 1170 60 1260 56 C1350 52 1400 66 1440 68 L1440 130 0 130 Z"/>
+    <path fill="#1a2338" d="M0 96 C90 90 150 74 230 78 C310 82 370 98 450 94 C530 90 590 70 670 68 C750 66 810 88 890 92 C970 96 1030 76 1110 72 C1190 68 1250 88 1330 92 C1390 95 1420 88 1440 90 L1440 130 0 130 Z"/>
+    <g fill="#10162a">
+      <use href="#fir-a" transform="translate(80,93) scale(.48)"/><use href="#fir-b" transform="translate(160,81) scale(.52)"/><use href="#fir-a" transform="translate(240,80) scale(.5)"/><use href="#fir-b" transform="translate(330,91) scale(.46)"/><use href="#fir-a" transform="translate(420,95) scale(.48)"/><use href="#fir-b" transform="translate(500,85) scale(.52)"/><use href="#fir-a" transform="translate(580,73) scale(.5)"/><use href="#snag" transform="translate(646,70) scale(.5)"/><use href="#fir-b" transform="translate(700,71) scale(.52)"/><use href="#fir-a" transform="translate(760,76) scale(.48)"/><use href="#fir-b" transform="translate(830,89) scale(.46)"/><use href="#fir-a" transform="translate(900,92) scale(.5)"/><use href="#fir-b" transform="translate(980,85) scale(.48)"/><use href="#oak" transform="translate(1050,76) scale(.5)"/><use href="#fir-a" transform="translate(1120,73) scale(.52)"/><use href="#fir-b" transform="translate(1200,84) scale(.46)"/><use href="#fir-a" transform="translate(1280,90) scale(.5)"/><use href="#fir-b" transform="translate(1360,92) scale(.48)"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <p class="sig">"Rows of blue, running west toward Tennessee."</p>
+    <p class="tiny">Aiden ✦ Pranjal · Aug 22–23, 2026 · Blue Ridge Mountains, NC</p>
+    <p class="tiny" style="letter-spacing:.18em;opacity:.35">Photography: Blue Ridge Parkway Association · Visit NC · Cool River Tubing · The NC Arboretum</p>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Checklist (in-memory only)
+const checks = document.querySelectorAll('.check');
+const packCount = document.getElementById('packCount');
+const packTotal = document.getElementById('packTotal');
+const packBar = document.getElementById('packBar');
+if (packTotal) packTotal.textContent = checks.length;
+function refreshPack(){
+  const done = document.querySelectorAll('.check.done').length;
+  if (packCount) packCount.textContent = done;
+  if (packBar) packBar.style.width = (checks.length ? (done / checks.length * 100) : 0) + '%';
+}
+checks.forEach(btn=>{
+  btn.addEventListener('click',()=>{ btn.classList.toggle('done'); refreshPack(); });
+});
+refreshPack();
+</script>
+</body>
+</html>
